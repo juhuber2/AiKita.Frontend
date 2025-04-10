@@ -1,0 +1,14 @@
+<!-- app.component.html -->
+<h1>Personen und Logs</h1>
+
+<input [(ngModel)]="personName" placeholder="Name eingeben">
+<button (click)="savePerson()">Person speichern</button>
+
+<br><br>
+
+<select [(ngModel)]="selectedPersonId">
+  <option *ngFor="let p of personen" [value]="p.id">{{ p.name }}</option>
+</select>
+
+<input [(ngModel)]="logText" placeholder="Log-Eintrag">
+<button (click)="saveLog()">Log speichern</button>
